@@ -1,4 +1,4 @@
-name: Officials Progress Monitor
+name: Officials Progress Monitor (Feishu)
 
 on:
   schedule:
@@ -32,7 +32,7 @@ jobs:
         
     - name: Run Monitor Script
       env:
-        WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
+        FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
       run: python monitor.py
 
     - name: Commit history back to repo
